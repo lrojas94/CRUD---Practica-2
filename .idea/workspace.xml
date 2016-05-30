@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33f1f146-d5fe-4a3d-82c9-d217f50996f3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/StudentParser.java" afterPath="$PROJECT_DIR$/src/main/java/StudentParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/students.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/students.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl" afterPath="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl" />
     </list>
     <ignored path="CRUD - Practica #2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_edit_student.ftl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="add_edit_student.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="114">
+              <caret line="47" column="68" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -137,7 +136,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="students.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="students.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/students.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -499,10 +498,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Student.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/header.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/view_student.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/StudentParser.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/students.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl" />
       </list>
     </option>
   </component>
@@ -1114,12 +1113,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464533426125</updated>
-      <workItem from="1464533431028" duration="25050000" />
+      <workItem from="1464533431028" duration="25559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25050000" />
+    <option name="totallyTimeSpent" value="25559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
@@ -1294,14 +1293,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -1336,6 +1327,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spark/template/freemarker/add_edit_student.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="47" column="68" selection-start-line="47" selection-start-column="68" selection-end-line="47" selection-end-column="68" />
           <folding />
         </state>
       </provider>

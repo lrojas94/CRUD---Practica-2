@@ -44,12 +44,14 @@
                            id="telefono" name="tel" placeholder="ej. 809-897-5132">
                 </div>
             </div>
-
-            <div class="col-xs-6 col-xs-offset-6">
+            <div class="col-xs-6">
+                <a href="/" class="pull-right btn btn-info btn-block">Cancelar</a>
+            </div>
+            <div class="col-xs-6">
                 <#if is_edit??>
-                    <button class="pull-right btn btn-success"><i class="fa fa-pencil"></i> Finalizar Edicion</button>
+                    <button class="pull-right btn btn-success btn-block"><i class="fa fa-pencil"></i> Finalizar Edicion</button>
                 <#else>
-                    <button class="pull-right btn btn-success"><i class="fa fa-plus"></i> Agregar</button>
+                    <button class="pull-right btn btn-success btn-block"><i class="fa fa-plus"></i> Agregar</button>
                 </#if>
             </div>
         </form>
