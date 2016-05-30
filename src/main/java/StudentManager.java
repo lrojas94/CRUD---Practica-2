@@ -7,10 +7,10 @@ import java.util.ArrayList;
 /**
  * Created by luis on 5/29/16.
  */
-public class StudentParser {
+public class StudentManager {
     public static String url = "jdbc:h2:tcp://localhost/~/students";
 
-    public StudentParser(){
+    public StudentManager(){
         try{
             Class.forName("org.h2.Driver");
         }catch (Exception e){
@@ -41,6 +41,7 @@ public class StudentParser {
                 students.add(student);
             }
 
+            con.close();
             return students;
 
         }catch (Exception e){
@@ -62,6 +63,7 @@ public class StudentParser {
                     "VALUES ('%s','%s','%s','%s')",student.getMatricula(),student.getNombre(),student.getApellido(),student.getTelefono());
 
             con.createStatement().execute(query);
+            con.close();
             return true;
         } catch (Exception e){
             System.out.println(e.getMessage());
@@ -85,6 +87,7 @@ public class StudentParser {
                     ,student.getMatricula(),student.getNombre(),student.getApellido(),student.getTelefono(),matricula);
 
             con.createStatement().execute(query);
+            con.close();
             return true;
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -104,6 +107,7 @@ public class StudentParser {
                             " WHERE MATRICULA = '%s'",matricula);
 
             con.createStatement().execute(query);
+            con.close();
             return true;
         }catch (Exception e){
             System.out.println(e.getMessage());

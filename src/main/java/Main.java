@@ -29,7 +29,7 @@ public class Main {
 
     public static void main(String[] args) {
         staticFiles.location("/public");
-        StudentParser parser = new StudentParser();
+        StudentManager parser = new StudentManager();
 
         get("/", (request,response)->{
             Map<String, Object> attributes = new HashMap<String, Object>();
