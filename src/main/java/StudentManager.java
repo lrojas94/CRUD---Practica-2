@@ -45,7 +45,6 @@ public class StudentManager {
             return students;
 
         }catch (Exception e){
-            System.out.println("T.T ERROR");
             System.out.println(e.getMessage());
         } finally {
             return students;

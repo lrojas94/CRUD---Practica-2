@@ -29,11 +29,11 @@ public class Main {
 
     public static void main(String[] args) {
         staticFiles.location("/public");
-        StudentManager parser = new StudentManager();
+        StudentManager studentManager = new StudentManager();
 
         get("/", (request,response)->{
             Map<String, Object> attributes = new HashMap<String, Object>();
-            attributes.put("students", parser.getStudents(""));
+            attributes.put("students", studentManager.getStudents(""));
 
             if(request.queryParams("delete") != null){
                 attributes.put("delete",request.queryParams("delete"));
@@ -45,7 +45,7 @@ public class Main {
         get("/view/:matricula",((request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String mat = request.params("matricula");
-            ArrayList<Student> student = parser.getStudents(mat);
+            ArrayList<Student> student = studentManager.getStudents(mat);
             if(student.size() != 0){
                 //Student found
                 attributes.put("student",student.get(0));
@@ -65,7 +65,7 @@ public class Main {
             Map<String, Object> attributes = new HashMap<String, Object>();
             Student student = createStudentFromForm(request);
 
-            if(parser.addStudent(student)){
+            if(studentManager.addStudent(student)){
                 response.redirect("/");
             }
             else{
@@ -80,7 +80,7 @@ public class Main {
         get("/edit/:matricula",(request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             String matricula = request.params("matricula");
-            ArrayList<Student> students = parser.getStudents(matricula);
+            ArrayList<Student> students = studentManager.getStudents(matricula);
             if(students.size() != 0) {
                 attributes.put("student",students.get(0));
             }
@@ -95,7 +95,7 @@ public class Main {
         post("/edit/:matricula",(request, response) -> {
             Map<String, Object> attributes = new HashMap<String, Object>();
             Student student = createStudentFromForm(request);
-            if(parser.saveStudent(student,request.params("matricula"))){
+            if(studentManager.saveStudent(student,request.params("matricula"))){
                 response.redirect("/");
             }
 
@@ -107,7 +107,7 @@ public class Main {
 
         get("/delete/:matricula",(request, response) -> {
             String mat = request.params("matricula");
-            if(parser.delete(mat)){
+            if(studentManager.delete(mat)){
                 response.redirect("/?delete=success");
             }
             else{
