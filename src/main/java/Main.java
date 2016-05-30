@@ -34,6 +34,11 @@ public class Main {
         get("/", (request,response)->{
             Map<String, Object> attributes = new HashMap<String, Object>();
             attributes.put("students", parser.getStudents(""));
+
+            if(request.queryParams("delete") != null){
+                attributes.put("delete",request.queryParams("delete"));
+            }
+
             return new ModelAndView(attributes,"students.ftl");
         }, new FreeMarkerEngine());
 
@@ -100,5 +105,15 @@ public class Main {
             return new ModelAndView(attributes,"add_edit_student.ftl");
         },new FreeMarkerEngine());
 
+        get("/delete/:matricula",(request, response) -> {
+            String mat = request.params("matricula");
+            if(parser.delete(mat)){
+                response.redirect("/?delete=success");
+            }
+            else{
+                response.redirect("/?delete=failure");
+            }
+            return new ModelAndView(null,"students.ftl");
+        }, new FreeMarkerEngine());
     }
 }

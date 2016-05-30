@@ -92,4 +92,23 @@ public class StudentParser {
 
         return false;
     }
+
+    public boolean delete(String matricula){
+        try{
+            ArrayList<Student> studentsFound = getStudents(matricula);
+            if(studentsFound.size() == 0){
+                return false; //Cant delete student
+            }
+            Connection con = DriverManager.getConnection(url, "sa", "");
+            String query = String.format("DELETE FROM STUDENTS.PUBLIC.ESTUDIANTES" +
+                            " WHERE MATRICULA = '%s'",matricula);
+
+            con.createStatement().execute(query);
+            return true;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        return false;
+    }
 }

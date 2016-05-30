@@ -1,5 +1,20 @@
 <#include "./header.ftl">
 <div class="container">
+    <#if delete??>
+        <div class="row">
+            <div class="col-xs-12">
+                <#if delete == "success">
+                    <div class="alert alert-success">
+                        Estudiante borrado exitosamente!
+                    </div>
+                <#else>
+                    <div class="alert alert-danger">
+                        Error borrando estudiante!
+                    </div>
+                </#if>
+            </div>
+        </div>
+    </#if>
     <div class="row">
         <div class="col-xs-3 col-xs-offset-9">
             <a href="/add" class="btn btn-success btn-block">
@@ -23,7 +38,7 @@
                     <td>${student.getMatricula()?string.computer}</td>
                     <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Menu <i class="fa fa-caret-down" ></i>
                             </button>
                             <ul class="dropdown-menu">
